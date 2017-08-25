@@ -15,6 +15,7 @@
 		5210E5191F4C53DD00104DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5210E5171F4C53DD00104DC2 /* LaunchScreen.storyboard */; };
 		5210E5241F4C53DD00104DC2 /* StackAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E5231F4C53DD00104DC2 /* StackAppTests.swift */; };
 		5210E52F1F4C53DD00104DC2 /* StackAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E52E1F4C53DD00104DC2 /* StackAppUITests.swift */; };
+		528278F71F4EF9B200A919E6 /* StackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528278F61F4EF9B200A919E6 /* StackManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5210E52A1F4C53DD00104DC2 /* StackAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5210E52E1F4C53DD00104DC2 /* StackAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackAppUITests.swift; sourceTree = "<group>"; };
 		5210E5301F4C53DD00104DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528278F61F4EF9B200A919E6 /* StackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */,
 				5210E50D1F4C53DD00104DC2 /* ViewController.swift */,
+				528278F61F4EF9B200A919E6 /* StackManager.swift */,
 				5210E50F1F4C53DD00104DC2 /* Main.storyboard */,
 				5210E5151F4C53DD00104DC2 /* Assets.xcassets */,
 				5210E5171F4C53DD00104DC2 /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 			files = (
 				5210E50E1F4C53DD00104DC2 /* ViewController.swift in Sources */,
 				5210E50C1F4C53DD00104DC2 /* AppDelegate.swift in Sources */,
+				528278F71F4EF9B200A919E6 /* StackManager.swift in Sources */,
 				5210E5141F4C53DD00104DC2 /* StackApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +524,7 @@
 				5210E5351F4C53DD00104DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5210E5361F4C53DD00104DC2 /* Build configuration list for PBXNativeTarget "StackAppTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				5210E5381F4C53DD00104DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5210E5391F4C53DD00104DC2 /* Build configuration list for PBXNativeTarget "StackAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				5210E53B1F4C53DD00104DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
