@@ -18,6 +18,7 @@
 		524699471F58092100569186 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524699461F58092100569186 /* ViewControllerTableViewCell.swift */; };
 		528278F71F4EF9B200A919E6 /* StackManagerDLG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */; };
 		529DCA731F5593C600F0E8E4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DCA721F5593C600F0E8E4 /* Question.swift */; };
+		52FAC6C41F599A3200A4394F /* StackManagerClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		524699461F58092100569186 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerDLG.swift; sourceTree = "<group>"; };
 		529DCA721F5593C600F0E8E4 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerClosures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				5210E50D1F4C53DD00104DC2 /* QuestionViewController.swift */,
 				524699461F58092100569186 /* ViewControllerTableViewCell.swift */,
 				528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */,
+				52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */,
 				529DCA721F5593C600F0E8E4 /* Question.swift */,
 				5210E50F1F4C53DD00104DC2 /* Main.storyboard */,
 				5210E5151F4C53DD00104DC2 /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FAC6C41F599A3200A4394F /* StackManagerClosures.swift in Sources */,
 				529DCA731F5593C600F0E8E4 /* Question.swift in Sources */,
 				5210E50E1F4C53DD00104DC2 /* QuestionViewController.swift in Sources */,
 				524699471F58092100569186 /* ViewControllerTableViewCell.swift in Sources */,
