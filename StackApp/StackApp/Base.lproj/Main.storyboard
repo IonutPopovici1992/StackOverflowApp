@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="StackApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,19 +26,42 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="XfE-T8-gho">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="XfE-T8-gho" customClass="ViewControllerTableViewCell" customModule="StackApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XfE-T8-gho" id="KyM-44-j2q">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.94999999999999996" contentMode="center" tableViewCell="XfE-T8-gho" id="KyM-44-j2q">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" text="Text, text, text, text, text, text, text, text, text, text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjI-Lh-9ZI" userLabel="Question Label">
+                                                    <rect key="frame" x="5" y="0.0" width="263" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Ianuarie 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S60-KH-V7r" userLabel="Date Label">
+                                                    <rect key="frame" x="283" y="8" width="79" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S60-KH-V7r" firstAttribute="leading" secondItem="CjI-Lh-9ZI" secondAttribute="trailing" constant="15" id="2cU-c9-dak"/>
+                                                <constraint firstItem="CjI-Lh-9ZI" firstAttribute="leading" secondItem="KyM-44-j2q" secondAttribute="leading" constant="5" id="4aW-w5-rkb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="S60-KH-V7r" secondAttribute="trailing" constant="5" id="MEa-bN-jMt"/>
+                                                <constraint firstItem="S60-KH-V7r" firstAttribute="top" secondItem="KyM-44-j2q" secondAttribute="topMargin" id="TJY-Mi-Ban"/>
+                                                <constraint firstItem="CjI-Lh-9ZI" firstAttribute="top" secondItem="KyM-44-j2q" secondAttribute="top" id="h7k-j2-K1K"/>
+                                                <constraint firstAttribute="bottom" secondItem="CjI-Lh-9ZI" secondAttribute="bottom" id="iij-w0-ve2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="S60-KH-V7r" secondAttribute="bottom" id="tgP-C2-mmk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="S60-KH-V7r" id="q1R-k9-euk"/>
+                                            <outlet property="questionLabel" destination="CjI-Lh-9ZI" id="00r-St-ccf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ua5-8M-vZZ"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="edO-B0-Z3c"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,6 +72,9 @@
                             <constraint firstItem="jUZ-vg-hkg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ulU-wJ-Ixw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="jUZ-vg-hkg" id="dRB-tf-ZUV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

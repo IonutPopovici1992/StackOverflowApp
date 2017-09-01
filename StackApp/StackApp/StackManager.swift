@@ -8,7 +8,15 @@
 
 import Foundation
 
+protocol StackManagerDelegate {
+    func dataTaskHasCompleted()
+}
+
 class StackManager {
+    
+    var delegate: StackManagerDelegate?
+    
+    var arrayOfQuestions = [Question]()
     
     func loadQuestions() {
 
@@ -18,42 +26,55 @@ class StackManager {
         let sessionConfiguration = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfiguration)
         
-        let sessionDataTask = session.dataTask(with: url!) { data, response, error in
-            if error != nil {
-                print("You've got an error: \(error!)")
-            } else {
+        let sessionDataTask = session.dataTask(with: url!) {[weak self] data, response, error in
                 if let content = data {
                     do {
                         let questionsDictionary = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, Any>
                         if let unwrappedQuestionsDictionary = questionsDictionary {
                             let questions: Array<Dictionary<String, Any>> = unwrappedQuestionsDictionary["items"] as! Array<Dictionary<String, Any>>
                             print("**********")
+                            print("Show questions!")
                             print(questions)
+                            print("End Show questions!")
+//                            print("Show Title, Last activity date, Question ID")
                             
                             for question in questions {
                                 var currentQuestion = Question()
-                                currentQuestion.title = unwrappedQuestionsDictionary["title"] as? String
-                                currentQuestion.last_activity_date = unwrappedQuestionsDictionary["last_activity_date"] as? Double
-                                currentQuestion.question_id = unwrappedQuestionsDictionary["question_id"] as? Double
-                                print(currentQuestion.title)
+                                currentQuestion.title = question["title"] as? String
+                                currentQuestion.last_activity_date = question["last_activity_date"] as? Double
+                                currentQuestion.question_id = question["question_id"] as? Double
+                                print("*** currentQuestion:")
+                                print(currentQuestion)
+                                
+                                self?.arrayOfQuestions.append(currentQuestion)
                             }
-                        }
+                            
+                            DispatchQueue.main.async {
+                                self?.delegate?.dataTaskHasCompleted()
+                            }
+
+                            print()
+                            print("*** arrayOfQuestions:")
+                            print(self?.arrayOfQuestions)
+                            print()
+                            print("*** arrayOfQuestions: question no. 1:")
+                            print(self?.arrayOfQuestions[0])
+                            print("*** arrayOfQuestions: question no. 1: Formated date:")
+                            print(self?.arrayOfQuestions[0].last_activity_date)
+                            print()
+                            print("My [Question] was constructed. (network request finished + parsing done)")
+                        } // end if
                         
-                        print(questionsDictionary)
+                        // print(questionsDictionary)
                     }
+                     
                     catch {}
-                    print(content)
+//                    print(content)
                 }
-                print("**********")
-            }
+//                print("**********")
         }
         
         sessionDataTask.resume()
     }
-}
-
-struct Question {
-    var title: String?
-    var last_activity_date: Double?
-    var question_id: Double?
+    
 }
