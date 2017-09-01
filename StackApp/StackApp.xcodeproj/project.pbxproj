@@ -16,7 +16,7 @@
 		5210E5241F4C53DD00104DC2 /* StackAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E5231F4C53DD00104DC2 /* StackAppTests.swift */; };
 		5210E52F1F4C53DD00104DC2 /* StackAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E52E1F4C53DD00104DC2 /* StackAppUITests.swift */; };
 		524699471F58092100569186 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524699461F58092100569186 /* ViewControllerTableViewCell.swift */; };
-		528278F71F4EF9B200A919E6 /* StackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528278F61F4EF9B200A919E6 /* StackManager.swift */; };
+		528278F71F4EF9B200A919E6 /* StackManagerDLG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */; };
 		529DCA731F5593C600F0E8E4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DCA721F5593C600F0E8E4 /* Question.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		5210E52E1F4C53DD00104DC2 /* StackAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackAppUITests.swift; sourceTree = "<group>"; };
 		5210E5301F4C53DD00104DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		524699461F58092100569186 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
-		528278F61F4EF9B200A919E6 /* StackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManager.swift; sourceTree = "<group>"; };
+		528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerDLG.swift; sourceTree = "<group>"; };
 		529DCA721F5593C600F0E8E4 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +108,7 @@
 				5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */,
 				5210E50D1F4C53DD00104DC2 /* QuestionViewController.swift */,
 				524699461F58092100569186 /* ViewControllerTableViewCell.swift */,
-				528278F61F4EF9B200A919E6 /* StackManager.swift */,
+				528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */,
 				529DCA721F5593C600F0E8E4 /* Question.swift */,
 				5210E50F1F4C53DD00104DC2 /* Main.storyboard */,
 				5210E5151F4C53DD00104DC2 /* Assets.xcassets */,
@@ -278,7 +278,7 @@
 				5210E50E1F4C53DD00104DC2 /* QuestionViewController.swift in Sources */,
 				524699471F58092100569186 /* ViewControllerTableViewCell.swift in Sources */,
 				5210E50C1F4C53DD00104DC2 /* AppDelegate.swift in Sources */,
-				528278F71F4EF9B200A919E6 /* StackManager.swift in Sources */,
+				528278F71F4EF9B200A919E6 /* StackManagerDLG.swift in Sources */,
 				5210E5141F4C53DD00104DC2 /* StackApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
