@@ -26,7 +26,7 @@ class StackManagerDLG {
         let sessionConfiguration = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfiguration)
         
-        let sessionDataTask = session.dataTask(with: url!) {[weak self] data, response, error in
+        let sessionDataTask = session.dataTask(with: url!) { [weak self] data, response, error in
                 if let content = data {
                     do {
                         let questionsDictionary = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, Any>
@@ -38,7 +38,7 @@ class StackManagerDLG {
                                 currentQuestion.title = question["title"] as? String
                                 currentQuestion.last_activity_date = question["last_activity_date"] as? Double
                                 currentQuestion.question_id = question["question_id"] as? Double
-                                print(currentQuestion)
+                                // print(currentQuestion)
                                 
                                 self?.arrayOfQuestions.append(currentQuestion)
                             }

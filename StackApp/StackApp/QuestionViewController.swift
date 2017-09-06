@@ -12,6 +12,16 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var table: UITableView!
     
+    @IBAction func switchQuestionsOnOff(_ sender: UISwitch) {
+        
+        if (sender.isOn == true) {
+            table.isHidden = false
+        } else {
+            table.isHidden = true
+        }
+    }
+    
+    
     let stackManager = StackManagerDLG()
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
