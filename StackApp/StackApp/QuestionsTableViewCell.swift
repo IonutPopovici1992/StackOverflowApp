@@ -1,5 +1,5 @@
 //
-//  ViewControllerTableViewCell.swift
+//  QuestionsTableViewCell.swift
 //  StackApp
 //
 //  Created by John on 8/31/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerTableViewCell: UITableViewCell {
+class QuestionsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
