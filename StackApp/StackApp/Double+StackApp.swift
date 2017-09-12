@@ -8,13 +8,29 @@
 
 import Foundation
 
-extension Double {
+enum SADateFormat {
+    case longDate
+    case shortDate
     
-    func unixFormattedTime() -> String {
+    func dateFormat() -> String {
+        switch self {
+            case .longDate:
+                return "dd MMMM yyyy, HH:mm"
+            case .shortDate:
+                return "dd MM yyyy"
+        }
+    }
+    
+}
+
+extension Double {
+
+    func unixFormattedTime(format: SADateFormat) -> String {
         let date = Date(timeIntervalSince1970: self)
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MM yyyy, HH:mm"
+        dateFormatter.dateFormat = format.dateFormat()
         
         return dateFormatter.string(from: date)
     }
+    
 }
