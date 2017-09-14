@@ -23,6 +23,7 @@
 		528278F71F4EF9B200A919E6 /* StackManagerDLG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */; };
 		529DCA731F5593C600F0E8E4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DCA721F5593C600F0E8E4 /* Question.swift */; };
 		52FAC6C41F599A3200A4394F /* StackManagerClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */; };
+		C0AD1F27CBB01E4594CA46AC /* Pods_StackApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3451C6D65C871E44348CA0CF /* Pods_StackApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3451C6D65C871E44348CA0CF /* Pods_StackApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		520F50DF1F6A78490080F37D /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
 		5210E5081F4C53DD00104DC2 /* StackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerDLG.swift; sourceTree = "<group>"; };
 		529DCA721F5593C600F0E8E4 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerClosures.swift; sourceTree = "<group>"; };
+		605233DFD6E4872A367F94E6 /* Pods-StackApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StackApp/Pods-StackApp.release.xcconfig"; sourceTree = "<group>"; };
+		EC254329B5B6A3D9CC6CC203 /* Pods-StackApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StackApp/Pods-StackApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0AD1F27CBB01E4594CA46AC /* Pods_StackApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C51BEFA2A7417F6556648D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3451C6D65C871E44348CA0CF /* Pods_StackApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		326BB97852E6C3CEFB40CC6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC254329B5B6A3D9CC6CC203 /* Pods-StackApp.debug.xcconfig */,
+				605233DFD6E4872A367F94E6 /* Pods-StackApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5210E4FF1F4C53DC00104DC2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +121,8 @@
 				5210E5221F4C53DD00104DC2 /* StackAppTests */,
 				5210E52D1F4C53DD00104DC2 /* StackAppUITests */,
 				5210E5091F4C53DD00104DC2 /* Products */,
+				326BB97852E6C3CEFB40CC6D /* Pods */,
+				0C51BEFA2A7417F6556648D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5210E5331F4C53DD00104DC2 /* Build configuration list for PBXNativeTarget "StackApp" */;
 			buildPhases = (
+				9EA48D398CBB77BC9E64C3E8 /* [CP] Check Pods Manifest.lock */,
 				5210E5041F4C53DD00104DC2 /* Sources */,
 				5210E5051F4C53DD00104DC2 /* Frameworks */,
 				5210E5061F4C53DD00104DC2 /* Resources */,
+				63DC2A3C34BE9C375AA94D30 /* [CP] Embed Pods Frameworks */,
+				B3C646297D9C428D309A0AD2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,6 +358,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63DC2A3C34BE9C375AA94D30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StackApp/Pods-StackApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackApp/Pods-StackApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EA48D398CBB77BC9E64C3E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StackApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3C646297D9C428D309A0AD2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackApp/Pods-StackApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5210E5041F4C53DD00104DC2 /* Sources */ = {
@@ -499,6 +580,7 @@
 		};
 		5210E5341F4C53DD00104DC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC254329B5B6A3D9CC6CC203 /* Pods-StackApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DJ7KXY394U;
@@ -512,6 +594,7 @@
 		};
 		5210E5351F4C53DD00104DC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 605233DFD6E4872A367F94E6 /* Pods-StackApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DJ7KXY394U;
