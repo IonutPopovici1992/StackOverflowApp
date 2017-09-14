@@ -12,6 +12,8 @@ class QuestionViewController: UIViewController, StackManagerDelegate {
 
     let stackManager = StackManagerDLG()
     
+    var tappedQuestion: Question?
+    
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -25,7 +27,7 @@ class QuestionViewController: UIViewController, StackManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let answersViewController = segue.destination as? AnswersViewController {
-//            answersViewController.currentQuestion = 
+            answersViewController.currentQuestion = self.tappedQuestion
         }
     }
 
@@ -97,7 +99,6 @@ extension QuestionViewController: UICollectionViewDataSource, UICollectionViewDe
     
     // Number of views
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
         return self.stackManager.arrayOfQuestions.count
     }
     
@@ -129,6 +130,8 @@ extension QuestionViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: SASegueIdentifiers.segueFromQuestionsToAnswers, sender: self)
+        
+        self.tappedQuestion = self.stackManager.arrayOfQuestions[indexPath.row]
     }
     
 }
