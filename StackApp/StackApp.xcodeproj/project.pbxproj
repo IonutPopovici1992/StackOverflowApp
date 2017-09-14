@@ -22,6 +22,7 @@
 		524699471F58092100569186 /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524699461F58092100569186 /* QuestionsTableViewCell.swift */; };
 		528278F71F4EF9B200A919E6 /* StackManagerDLG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */; };
 		529DCA731F5593C600F0E8E4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DCA721F5593C600F0E8E4 /* Question.swift */; };
+		52DF5FA61F6AA9C700D6E0F8 /* MappableObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF5FA51F6AA9C700D6E0F8 /* MappableObjects.swift */; };
 		52FAC6C41F599A3200A4394F /* StackManagerClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */; };
 		C0AD1F27CBB01E4594CA46AC /* Pods_StackApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3451C6D65C871E44348CA0CF /* Pods_StackApp.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		524699461F58092100569186 /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerDLG.swift; sourceTree = "<group>"; };
 		529DCA721F5593C600F0E8E4 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		52DF5FA51F6AA9C700D6E0F8 /* MappableObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableObjects.swift; sourceTree = "<group>"; };
 		52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerClosures.swift; sourceTree = "<group>"; };
 		605233DFD6E4872A367F94E6 /* Pods-StackApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StackApp/Pods-StackApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC254329B5B6A3D9CC6CC203 /* Pods-StackApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StackApp/Pods-StackApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				529DCA721F5593C600F0E8E4 /* Question.swift */,
+				52DF5FA51F6AA9C700D6E0F8 /* MappableObjects.swift */,
 			);
 			name = DataModels;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DF5FA61F6AA9C700D6E0F8 /* MappableObjects.swift in Sources */,
 				52FAC6C41F599A3200A4394F /* StackManagerClosures.swift in Sources */,
 				523802F51F669087005608BC /* QuestionsCollectionViewCell.swift in Sources */,
 				523803001F6815A2005608BC /* SegueIdentifiers.swift in Sources */,
