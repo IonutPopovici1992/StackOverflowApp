@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520F50E01F6A78490080F37D /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F50DF1F6A78490080F37D /* AnswersViewController.swift */; };
 		5210E50C1F4C53DD00104DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */; };
 		5210E50E1F4C53DD00104DC2 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E50D1F4C53DD00104DC2 /* QuestionViewController.swift */; };
 		5210E5111F4C53DD00104DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5210E50F1F4C53DD00104DC2 /* Main.storyboard */; };
@@ -17,7 +18,6 @@
 		5210E52F1F4C53DD00104DC2 /* StackAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E52E1F4C53DD00104DC2 /* StackAppUITests.swift */; };
 		523802F11F6680B0005608BC /* Double+StackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523802F01F6680B0005608BC /* Double+StackApp.swift */; };
 		523802F51F669087005608BC /* QuestionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523802F41F669087005608BC /* QuestionsCollectionViewCell.swift */; };
-		523802FE1F680B09005608BC /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523802FD1F680B09005608BC /* AnswersViewController.swift */; };
 		523803001F6815A2005608BC /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523802FF1F6815A2005608BC /* SegueIdentifiers.swift */; };
 		524699471F58092100569186 /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524699461F58092100569186 /* QuestionsTableViewCell.swift */; };
 		528278F71F4EF9B200A919E6 /* StackManagerDLG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */; };
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		520F50DF1F6A78490080F37D /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
 		5210E5081F4C53DD00104DC2 /* StackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5210E50D1F4C53DD00104DC2 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		5210E5301F4C53DD00104DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		523802F01F6680B0005608BC /* Double+StackApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+StackApp.swift"; sourceTree = "<group>"; };
 		523802F41F669087005608BC /* QuestionsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsCollectionViewCell.swift; sourceTree = "<group>"; };
-		523802FD1F680B09005608BC /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswersViewController.swift; path = Assets.xcassets/AnswersViewController.swift; sourceTree = "<group>"; };
 		523802FF1F6815A2005608BC /* SegueIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		524699461F58092100569186 /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerDLG.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				523802F81F66DD1E005608BC /* Cells */,
 				523802F71F66DCF2005608BC /* Extensions */,
 				5210E50D1F4C53DD00104DC2 /* QuestionViewController.swift */,
-				523802FD1F680B09005608BC /* AnswersViewController.swift */,
+				520F50DF1F6A78490080F37D /* AnswersViewController.swift */,
 				5210E5121F4C53DD00104DC2 /* StackApp.xcdatamodeld */,
 			);
 			path = StackApp;
@@ -341,8 +341,8 @@
 				523802F51F669087005608BC /* QuestionsCollectionViewCell.swift in Sources */,
 				523803001F6815A2005608BC /* SegueIdentifiers.swift in Sources */,
 				529DCA731F5593C600F0E8E4 /* Question.swift in Sources */,
+				520F50E01F6A78490080F37D /* AnswersViewController.swift in Sources */,
 				5210E50E1F4C53DD00104DC2 /* QuestionViewController.swift in Sources */,
-				523802FE1F680B09005608BC /* AnswersViewController.swift in Sources */,
 				524699471F58092100569186 /* QuestionsTableViewCell.swift in Sources */,
 				5210E50C1F4C53DD00104DC2 /* AppDelegate.swift in Sources */,
 				523802F11F6680B0005608BC /* Double+StackApp.swift in Sources */,
