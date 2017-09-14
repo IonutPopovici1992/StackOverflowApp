@@ -48,7 +48,7 @@ class QuestionViewController: UIViewController, StackManagerDelegate {
     
     fileprivate func configStackManager() {
         self.stackManager.delegate = self
-        self.stackManager.loadQuestions()
+        self.stackManager.loadQuestions(pageIndex: 1, pageSize: 100)
     }
     
     fileprivate func configCollectionView() {
