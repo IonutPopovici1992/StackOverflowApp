@@ -37,7 +37,7 @@ class StackManagerDLG {
                                 var currentQuestion = Question()
                                 currentQuestion.title = question["title"] as? String
                                 currentQuestion.last_activity_date = question["last_activity_date"] as? Double
-                                currentQuestion.question_id = question["question_id"] as? Double
+                                currentQuestion.question_id = question["question_id"] as? UInt
                                 // print(currentQuestion)
                                 
                                 self?.arrayOfQuestions.append(currentQuestion)
