@@ -22,6 +22,7 @@ class StackManagerDLG {
     
     private let maximumPageSize = 100
     
+    // loadQuestions functionality
     func loadQuestions(pageIndex: Int, pageSize: Int) {
 
         // The API has a 100 limit for the pagesize argument.
@@ -45,7 +46,6 @@ class StackManagerDLG {
                                     currentQuestion.title = question["title"] as? String
                                     currentQuestion.last_activity_date = question["last_activity_date"] as? Double
                                     currentQuestion.question_id = question["question_id"] as? UInt
-                                    // print(currentQuestion)
                                     self?.arrayOfQuestions.append(currentQuestion)
                                 }
                                 
@@ -63,19 +63,25 @@ class StackManagerDLG {
         sessionDataTask.resume()
     }
     
+    // loadAnswers functionality
     func loadAnswers(forQuestion question: Question) {
         
-        let stackoverflow = "https://api.stackexchange.com/2.2/questions/\(String(describing: question.question_id)))/answers?page=1&pagesize=50&order=desc&sort=creation&site=stackoverflow&filter=\(self.filterID)"
-        let url = URL(string: stackoverflow)
+        let answersAPI = baseStackOverflowURLString + "questions/\(String(describing: question.question_id))/answers?page=1&pagesize=50&order=desc&sort=creation&site=stackoverflow&filter=\(self.filterID)"
+        let url = URL(string: answersAPI)
         
         let sessionConfiguration = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfiguration)
         
         let sessionDataTask = session.dataTask(with: url!) { [weak self] data, response, error in
-            
+            if let content = data {
+                do {
+                    
+                }
+            }
         }
         
-//        sessionDataTask.resume()
+        sessionDataTask.resume()
     }
+    
     
 }

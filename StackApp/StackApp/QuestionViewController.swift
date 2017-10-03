@@ -77,10 +77,12 @@ class QuestionViewController: UIViewController, StackManagerDelegate {
 
 extension QuestionViewController: UITableViewDataSource, UITableViewDelegate {
     
+    // Number of rows
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.stackManager.arrayOfQuestions.count
     }
     
+    // Populate row
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuestionsTableViewCell
         
@@ -88,7 +90,7 @@ extension QuestionViewController: UITableViewDataSource, UITableViewDelegate {
         cell.questionLabel.text = question.title
         
         if let unixTime = question.last_activity_date {
-            cell.dateLabel.text = unixTime.unixFormattedTime(format: SADateFormat.shortDate)
+             cell.dateLabel.text = unixTime.unixFormattedTime(format: SADateFormat.shortDate)
         }
         
         return cell
@@ -110,7 +112,7 @@ extension QuestionViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.questionLabel.text = question.title
         
         if let unixTime = question.last_activity_date {
-            cell.dateLabel.text = unixTime.unixFormattedTime(format: SADateFormat.longDate)
+             cell.dateLabel.text = unixTime.unixFormattedTime(format: SADateFormat.longDate)
         }
         
         let row = Int(indexPath.row / 2)

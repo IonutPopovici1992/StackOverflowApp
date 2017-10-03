@@ -10,6 +10,6 @@ import Foundation
 
 struct Question {
     var title: String?
-    var last_activity_date: Double?
     var question_id: UInt?
+    var last_activity_date: Double?
 }

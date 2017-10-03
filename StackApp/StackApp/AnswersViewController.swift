@@ -12,7 +12,7 @@ class AnswersViewController: UIViewController, StackManagerDelegate {
     
     var currentQuestion: Question?
     
-    fileprivate var answers:[Answer]?
+    fileprivate var answers: [Answer]?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -22,7 +22,9 @@ class AnswersViewController: UIViewController, StackManagerDelegate {
                                              pageIndex: 1,
                                              pageSize: 100,
                                              completionHandler: {response in
-                                                
+                                                if let error = response.error {
+                                                    print("[\(self.description)] loadAnswers error : \(error)")
+                                                }
             })
         }
     }
@@ -47,9 +49,10 @@ extension AnswersViewController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuestionsTableViewCell
         
-//        let answer = answers[indexPath.row]
-//        cell.questionLabel.text =
+        let answer = answers![indexPath.row]
+        // cell.questionLabel.text = question.title
         
         return cell
     }
+    
 }

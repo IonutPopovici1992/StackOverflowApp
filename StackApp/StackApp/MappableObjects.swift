@@ -9,8 +9,21 @@
 import Foundation
 import ObjectMapper
 
-struct Answer:Mappable {
+struct QuestionMappable: Mappable {
+    var title: String?
+    var last_activity_date: UInt?
+    var question_id: UInt?
+    
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
+        title <- map["title"]
+        last_activity_date <- map["last_activity_date"]
+        question_id <- map["question_id"]
+    }
+}
 
+struct AnswerMappable: Mappable {
     var comments: [Comment]?
     var owner: Owner?
     var is_accepted: Bool?
@@ -36,7 +49,7 @@ struct Answer:Mappable {
     }
 }
 
-struct Comment:Mappable {
+struct Comment: Mappable {
     var owner: Owner?
     var score: Int?
     var creation_date: UInt?
@@ -54,12 +67,11 @@ struct Comment:Mappable {
     }
 }
 
-struct Owner:Mappable {
-    
+struct Owner: Mappable {
     var reputation: Int?
     var user_id: Int?
     var accept_rate: Int?
-    var profile_image: URL?
+    var profile_image: String?
     var display_name: String?
     
     init?(map: Map) {}

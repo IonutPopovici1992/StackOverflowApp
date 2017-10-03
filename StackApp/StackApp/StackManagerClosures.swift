@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
-//import ObjectMapper
 
 class StackManagerClosures {
     
@@ -17,10 +16,35 @@ class StackManagerClosures {
     private static let filterID = "!b0OfNenVjyled*"
     private static let maximumPageSize = 100
     
+    class func loadQuestions(forQuestion: Question,
+                            pageIndex: Int,
+                            pageSize: Int,
+                            completionHandler: @escaping (DataResponse<[QuestionMappable]>) -> Void) {
+        let baseURLString = StackManagerClosures.baseStackOverflowURLString
+        let maxPageSize = StackManagerClosures.maximumPageSize
+        
+        // The API has a 100 limit for the pagesize argument.
+        let limitedPageSize = pageSize > maxPageSize ? maxPageSize : pageSize
+        
+        let questionsAPI = baseURLString + "questions/\(String(describing: forQuestion.question_id))?page=\(pageIndex)&pagesize=\(limitedPageSize)&order=desc&sort=activity&site=stackoverflow"
+        let url = URL(string: questionsAPI)!
+        
+        let dataRequest = Alamofire.request(url,
+                                            method: HTTPMethod.get,
+                                            parameters: nil,
+                                            encoding: JSONEncoding.default,
+                                            headers: nil)
+        dataRequest.responseArray { (response: DataResponse<[QuestionMappable]>) in
+            completionHandler(response)
+        }
+        
+    }
+    
+    
     class func loadAnswers(forQuestion: Question,
                            pageIndex: Int,
                            pageSize: Int,
-                           completionHandler: @escaping (DataResponse<[Answer]>) -> Void) {
+                           completionHandler: @escaping (DataResponse<[AnswerMappable]>) -> Void) {
         
         let filter = StackManagerClosures.filterID
         let baseURLString = StackManagerClosures.baseStackOverflowURLString
@@ -30,15 +54,18 @@ class StackManagerClosures {
         let limitedPageSize = pageSize > maxPageSize ? maxPageSize : pageSize
         
         let answersAPI = baseURLString + "answers/\(String(describing: forQuestion.question_id))?page=\(pageIndex)&pagesize=\(limitedPageSize)&order=desc&sort=activity&site=stackoverflow&filter=\(filter)"
-        let url = URL(string:answersAPI)!
+        let url = URL(string: answersAPI)!
         
         let dataRequest = Alamofire.request(url,
                                             method: HTTPMethod.get,
                                             parameters: nil,
                                             encoding: JSONEncoding.default,
                                             headers: nil)
-        dataRequest.responseArray { (response: DataResponse<[Answer]>) in
+        dataRequest.responseArray { (response: DataResponse<[AnswerMappable]>) in
             completionHandler(response)
         }
+        
     }
+    
+    
 }
