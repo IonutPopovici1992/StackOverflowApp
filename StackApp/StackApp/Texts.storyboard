@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SA4-yw-t8i">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ydh-3m-rEo">
+            <objects>
+                <navigationController title="Navigation Controller" id="SA4-yw-t8i" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="je1-WB-LZZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fw3-bo-zm9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Og3-T2-sOw" kind="relationship" relationship="rootViewController" id="erw-y2-F2T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKB-Pn-XvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="-1379"/>
+        </scene>
+        <!--Texts-->
+        <scene sceneID="nzO-ej-aYa">
+            <objects>
+                <viewController title="Texts" id="Og3-T2-sOw" customClass="TextsViewController" customModule="StackApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FjY-EG-e5A"/>
+                        <viewControllerLayoutGuide type="bottom" id="kdm-MW-HNV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="center" id="DSS-y8-0HP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmT-WM-vAU">
+                                <rect key="frame" x="16" y="114" width="343" height="28"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="gsB-XC-Anb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your name ..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-Qd-v0N">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M2f-nh-Rug"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hte-CG-I2w">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bss-ef-CxC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Hello!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="action:" destination="Og3-T2-sOw" eventType="touchUpInside" id="F6R-hv-ogG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wmT-WM-vAU" firstAttribute="top" secondItem="FjY-EG-e5A" secondAttribute="bottom" constant="50" id="JZd-Qr-Hno"/>
+                            <constraint firstItem="kdm-MW-HNV" firstAttribute="top" secondItem="hte-CG-I2w" secondAttribute="bottom" constant="16" id="Jti-l6-dvE"/>
+                            <constraint firstItem="NkP-Qd-v0N" firstAttribute="centerY" secondItem="DSS-y8-0HP" secondAttribute="centerY" id="PLz-cd-GhP"/>
+                            <constraint firstItem="NkP-Qd-v0N" firstAttribute="width" secondItem="hte-CG-I2w" secondAttribute="width" id="dia-j9-XM3"/>
+                            <constraint firstAttribute="trailing" secondItem="wmT-WM-vAU" secondAttribute="trailing" constant="16" id="gRa-SC-93N"/>
+                            <constraint firstItem="hte-CG-I2w" firstAttribute="leading" secondItem="DSS-y8-0HP" secondAttribute="leading" constant="16" id="i8U-F1-4JZ"/>
+                            <constraint firstAttribute="trailing" secondItem="hte-CG-I2w" secondAttribute="trailing" constant="16" id="ipZ-gj-1SO"/>
+                            <constraint firstItem="NkP-Qd-v0N" firstAttribute="centerX" secondItem="DSS-y8-0HP" secondAttribute="centerX" id="xs9-EW-pUy"/>
+                            <constraint firstItem="wmT-WM-vAU" firstAttribute="leading" secondItem="DSS-y8-0HP" secondAttribute="leading" constant="16" id="zhK-4C-s5Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DyO-CO-uQX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Texts" image="open-book" selectedImage="open-book" id="pVc-eI-SyE"/>
+                    <navigationItem key="navigationItem" title="Texts" id="Cpe-6S-JcH"/>
+                    <connections>
+                        <outlet property="button" destination="hte-CG-I2w" id="W1u-L1-TQR"/>
+                        <outlet property="input" destination="NkP-Qd-v0N" id="1W7-QR-OWR"/>
+                        <outlet property="output" destination="wmT-WM-vAU" id="yLb-lZ-axl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgd-9w-Uv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="-1379"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="open-book" width="30" height="30"/>
+    </resources>
+</document>

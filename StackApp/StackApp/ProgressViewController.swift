@@ -10,23 +10,17 @@ import UIKit
 
 class ProgressViewController: UIViewController {
     
-    @IBOutlet weak var progressViewCompletion: UIProgressView!
+    @IBOutlet weak var progressView: UIProgressView!
     
-    @IBAction func progressFromSlider(_ sender: UISlider) {
-        let progressViewMaxValue = 100
-        progressViewCompletion.progress = Float(Int(sender.value) / progressViewMaxValue)
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        let sliderMaximumValue = sender.maximumValue
+        progressView.progress = sender.value / sliderMaximumValue
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
