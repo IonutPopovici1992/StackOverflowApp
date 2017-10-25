@@ -18,21 +18,26 @@ class AnswersViewController: UIViewController, StackManagerDelegate {
         super.viewDidAppear(animated)
         
         if let unwrappedQuestion = currentQuestion {
-            StackManagerClosures.loadAnswers(forQuestion: unwrappedQuestion,
-                                             pageIndex: 1,
-                                             pageSize: 100,
-                                             completionHandler: {response in
-                                                if let error = response.error {
-                                                    print("[\(self.description)] loadAnswers error : \(error)")
-                                                }
-            })
+            // StackManagerClosures.loadAnswers(forQuestion: unwrappedQuestion,
+                                             // pageIndex: 1,
+                                             // pageSize: 100,
+                                             // completionHandler: { response in
+                                                // if let error = response.error {
+                                                    // print("[\(self.description)] loadAnswers error : \(error)")
+                                                // }
+                                        // })
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    
+    //            StackManagerClosures.loadAnswers(forQuestion: unwrappedQuestion,
+    //                                             pageIndex: 1,
+    //                                             pageSize: 100,
+    //                                             completionHandler: {response in
+    //                                                if let error = response.error {
+    //                                                    print("[\(self.description)] loadAnswers error : \(error)")
+    //                                                }
+    //            })
     
     func dataTaskHasCompleted() {
         
@@ -50,7 +55,6 @@ extension AnswersViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuestionsTableViewCell
         
         let answer = answers![indexPath.row]
-        // cell.questionLabel.text = question.title
         
         return cell
     }

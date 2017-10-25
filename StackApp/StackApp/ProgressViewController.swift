@@ -11,6 +11,7 @@ import UIKit
 class ProgressViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let sliderMaximumValue = sender.maximumValue
@@ -20,8 +21,15 @@ class ProgressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configScrollView()
     }
-
+    
+    fileprivate func configScrollView() {
+        self.scrollView.layer.borderColor = UIColor.black.cgColor
+        self.scrollView.layer.borderWidth = 1
+        self.scrollView.layer.cornerRadius = 5
+    }
+    
     /*
     // MARK: - Navigation
 

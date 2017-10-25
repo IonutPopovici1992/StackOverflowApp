@@ -32,9 +32,9 @@ class TextsViewController: UIViewController {
     }
     
     fileprivate func configButtons() {
-        self.button.layer.cornerRadius = 5;
-        self.button.layer.borderWidth = 1;
         self.button.layer.borderColor = UIColor.black.cgColor;
+        self.button.layer.borderWidth = 1;
+        self.button.layer.cornerRadius = 5;
     }
     
     /*
