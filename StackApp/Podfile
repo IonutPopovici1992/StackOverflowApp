@@ -5,6 +5,4 @@ workspace 'StackApp.xcworkspace'
 
 target 'StackApp' do
 	pod 'Alamofire', '~> 4.5'
-    pod 'ObjectMapper'
-    pod 'AlamofireObjectMapper'
 end
