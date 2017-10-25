@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Question {
+struct Question: Codable {
     var title: String?
     var question_id: UInt?
     var last_activity_date: Double?

@@ -8,9 +8,12 @@
 
 import Foundation
 
-struct Answer {
+struct Answer: Codable {
+    var comments: [Comment]?
+    var owner: Owner?
+    var is_accepted: Bool?
+    var score: UInt?
     var body: String?
-    var comment: [Comment]?
     var question_id: UInt?
     var answer_id: UInt?
     var last_activity_date: UInt?
