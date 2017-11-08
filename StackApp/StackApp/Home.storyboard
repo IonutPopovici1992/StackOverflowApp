@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIJ-PN-dC8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIJ-PN-dC8">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Yjm-QD-Fsc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e8d-RH-pbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="Navigation Controller" id="LIJ-PN-dC8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="viR-Pw-lTN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dGk-ZR-Gvi">
@@ -25,6 +24,7 @@
                         <segue destination="0Qa-BE-3QO" kind="relationship" relationship="rootViewController" id="EwA-PP-2UH"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8d-RH-pbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-214" y="-2079"/>
         </scene>
@@ -52,13 +52,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" text="Text, text, text, text, text, text, text, text, text, text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmq-NA-8vp" userLabel="Question Label">
-                                                    <rect key="frame" x="5" y="0.0" width="208" height="43.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="201" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Ianuarie 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZh-qg-hjb" userLabel="Date Label">
-                                                    <rect key="frame" x="228" y="8" width="79" height="27.5"/>
+                                                    <rect key="frame" x="221" y="11" width="79" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="GZh-qg-hjb" secondAttribute="bottom" id="Lv7-xH-NHq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="GZh-qg-hjb" secondAttribute="trailing" constant="5" id="T7J-aU-i6F"/>
                                                 <constraint firstItem="mmq-NA-8vp" firstAttribute="top" secondItem="Jzx-kW-Iow" secondAttribute="top" id="abb-1C-FRZ"/>
-                                                <constraint firstItem="GZh-qg-hjb" firstAttribute="leading" secondItem="mmq-NA-8vp" secondAttribute="trailing" constant="15" id="dhh-tK-O5X"/>
+                                                <constraint firstItem="GZh-qg-hjb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mmq-NA-8vp" secondAttribute="trailing" constant="15" id="dhh-tK-O5X"/>
                                                 <constraint firstItem="GZh-qg-hjb" firstAttribute="top" secondItem="Jzx-kW-Iow" secondAttribute="topMargin" id="oDI-gA-jJy"/>
                                                 <constraint firstAttribute="bottom" secondItem="mmq-NA-8vp" secondAttribute="bottom" id="qkm-MR-SZD"/>
                                             </constraints>
@@ -145,6 +145,9 @@
                             <constraint firstItem="Hny-Qz-lFq" firstAttribute="top" secondItem="5Xz-Eb-bcc" secondAttribute="top" id="SIm-he-EJV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9hc-c2-Gov"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Questions" image="questions1" selectedImage="questions1" id="IfU-uI-4Vf"/>
                     <navigationItem key="navigationItem" title="Home" id="mgG-0R-iOQ">

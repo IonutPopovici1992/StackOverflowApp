@@ -8,8 +8,16 @@
 
 import Foundation
 
+struct QuestionList: Codable {
+    var items: [Question]
+    var has_more: Bool
+    var quota_max: UInt
+    var quota_remaining: UInt
+}
+
 struct Question: Codable {
-    var title: String?
-    var question_id: UInt?
-    var last_activity_date: Double?
+    var title: String
+    var question_id: UInt
+    var last_activity_date: Double
+    var owner: Owner
 }
