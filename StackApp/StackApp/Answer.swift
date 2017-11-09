@@ -9,12 +9,12 @@
 import Foundation
 
 struct Answer: Codable {
-    var comments: [Comment]?
-    var owner: Owner?
-    var is_accepted: Bool?
-    var score: UInt?
-    var body: String?
-    var question_id: UInt?
-    var answer_id: UInt?
-    var last_activity_date: UInt?
+    var body: String
+    var comments: [Comment]
+    var owner: Owner
+    var question_id: UInt
+    var answer_id: UInt
+    var score: UInt
+    var last_activity_date: UInt
+    var is_accepted: Bool
 }

@@ -9,10 +9,10 @@
 import Foundation
 
 struct Owner: Codable {
-    var reputation: Int?
-    var user_id: Int?
-    var user_type: String?
-    var profile_image: String?
-    var accept_rate: Int?
-    var display_name: String?
+    var display_name: String
+    var profile_image: String
+    var user_id: Int
+    var user_type: String
+    var reputation: Int
+    var accept_rate: Int
 }

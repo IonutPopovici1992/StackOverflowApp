@@ -9,9 +9,9 @@
 import Foundation
 
 struct Comment: Codable {
-    var owner: Owner?
-    var score: Int?
-    var creation_date: UInt?
-    var comment_id: UInt?
-    var body: String?
+    var body: String
+    var owner: Owner
+    var score: Int
+    var creation_date: UInt
+    var comment_id: UInt
 }
