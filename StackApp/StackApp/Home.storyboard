@@ -209,6 +209,9 @@
                         <viewLayoutGuide key="safeArea" id="iNZ-dE-Cvb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Answers" image="answers1" selectedImage="answers1" id="uGK-P9-S3B"/>
+                    <connections>
+                        <outlet property="table" destination="ABn-PG-kXS" id="mSu-Qb-cFe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ln-4l-I7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

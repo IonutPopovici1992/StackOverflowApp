@@ -42,10 +42,30 @@ class StackManagerDLG {
                         if let unwrappedQuestionsDictionary = questionsDictionary {
                             if let questions = unwrappedQuestionsDictionary["items"] as? Array<Dictionary<String, Any>> {
                                 for question in questions {
-                                    var currentQuestion = Question()
-                                    currentQuestion.title = question["title"] as? String
-                                    currentQuestion.last_activity_date = question["last_activity_date"] as? Double
-                                    currentQuestion.question_id = question["question_id"] as? UInt
+                                    let title = question["title"] as! String
+                                    let lastActivityDate = question["last_activity_date"] as! Double
+                                    let questionID = question["question_id"] as! UInt
+
+                                    let ownerDict = question["owner"] as! Dictionary<String, Any>
+                                    let userId = ownerDict["user_id"] as! Int
+                                    let displayName = ownerDict["display_name"] as! String
+                                    let userType = ownerDict["user_type"] as? String
+                                    let reputation = ownerDict["reputation"] as? Int
+                                    let profileImage = ownerDict["profile_image"] as? String
+                                    let acceptRate = ownerDict["accept_rate"] as? Int
+
+                                    let owner = Owner(display_name: displayName,
+                                                      profile_image: profileImage,
+                                                      user_id: userId,
+                                                      user_type: userType,
+                                                      reputation: reputation,
+                                                      accept_rate: acceptRate)
+
+                                    let currentQuestion = Question(title: title,
+                                                                   question_id: questionID,
+                                                                   last_activity_date: lastActivityDate,
+                                                                   owner: owner)
+
                                     self?.arrayOfQuestions.append(currentQuestion)
                                 }
                                 

@@ -8,53 +8,45 @@
 
 import UIKit
 
-class AnswersViewController: UIViewController, StackManagerDelegate {
+class AnswersViewController: UIViewController {
+    
+    @IBOutlet weak var table: UITableView!
+    
+    var pageIndex: UInt = 1
+    let pageSize: UInt = 100
     
     var currentQuestion: Question?
     
-    fileprivate var answers: [Answer]?
+    fileprivate var answers = [Answer]()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        requestAnswers(pageIndex: pageIndex, pageSize: pageSize)
+    }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if let unwrappedQuestion = currentQuestion {
-            // StackManagerClosures.loadAnswers(forQuestion: unwrappedQuestion,
-                                             // pageIndex: 1,
-                                             // pageSize: 100,
-                                             // completionHandler: { response in
-                                                // if let error = response.error {
-                                                    // print("[\(self.description)] loadAnswers error : \(error)")
-                                                // }
-                                        // })
+    fileprivate func requestAnswers(pageIndex: UInt, pageSize: UInt) {
+        StackManagerClosures.loadAnswers(forQuestion: currentQuestion!,
+                                         pageIndex: pageIndex,
+                                         pageSize: pageSize) { (answersOrNil, errorOrNil) in
+                                            if let unwrappedAnswers = answersOrNil {
+                                                self.answers.append(contentsOf: unwrappedAnswers)
+                                                self.table.reloadData()
+                                            }
         }
     }
     
-    
-    //            StackManagerClosures.loadAnswers(forQuestion: unwrappedQuestion,
-    //                                             pageIndex: 1,
-    //                                             pageSize: 100,
-    //                                             completionHandler: {response in
-    //                                                if let error = response.error {
-    //                                                    print("[\(self.description)] loadAnswers error : \(error)")
-    //                                                }
-    //            })
-    
-    func dataTaskHasCompleted() {
-        
-    }
-
 }
 
 extension AnswersViewController: UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.answers?.count ?? 0
+        return self.answers.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuestionsTableViewCell
-        
-        let answer = answers![indexPath.row]
+        let answer = answers[indexPath.row]
+        cell.questionLabel.text = answer.body
         
         return cell
     }

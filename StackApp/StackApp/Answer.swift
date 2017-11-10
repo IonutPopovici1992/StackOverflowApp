@@ -8,9 +8,16 @@
 
 import Foundation
 
+struct AnswerList: Codable {
+    var items: [Answer]
+    var has_more: Bool
+    var quota_max: UInt
+    var quota_remaining: UInt
+}
+
 struct Answer: Codable {
     var body: String
-    var comments: [Comment]
+    var comments: [Comment]?
     var owner: Owner
     var question_id: UInt
     var answer_id: UInt

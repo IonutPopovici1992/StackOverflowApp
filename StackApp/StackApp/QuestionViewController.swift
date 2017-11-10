@@ -28,8 +28,7 @@ class QuestionViewController: UIViewController {
         
         configTable()
         configCollectionView()
-        requestQuestions(pageIndex: pageIndex,
-                         pageSize: pageSize)
+        requestQuestions(pageIndex: pageIndex, pageSize: pageSize)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -68,13 +67,12 @@ class QuestionViewController: UIViewController {
     
     fileprivate func showAlert(error: Error?) {
         let title = "Oupsss!"
-        let message = "There was an issue while trying to obtain the latest questions: \(error?.localizedDescription ?? "")"
+        let message = "There was an issue while trying to obtain the latest questions: \(error.debugDescription)"
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (alertAction) in
             alertController.dismiss(animated: true, completion: nil)
         }
-        
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
@@ -155,9 +153,9 @@ extension QuestionViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: SASegueIdentifiers.segueFromQuestionsToAnswers, sender: self)
-        
         self.tappedQuestion = questions[indexPath.row]
+        
+        self.performSegue(withIdentifier: SASegueIdentifiers.segueFromQuestionsToAnswers, sender: self)
     }
     
 }
