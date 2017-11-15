@@ -21,21 +21,25 @@ class AnswersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         requestAnswers(pageIndex: pageIndex, pageSize: pageSize)
     }
     
+    /// requestAnswers()
     fileprivate func requestAnswers(pageIndex: UInt, pageSize: UInt) {
         StackManagerClosures.loadAnswers(forQuestion: currentQuestion!,
                                          pageIndex: pageIndex,
                                          pageSize: pageSize) { (answersOrNil, errorOrNil) in
                                             if let unwrappedAnswers = answersOrNil {
                                                 self.answers.append(contentsOf: unwrappedAnswers)
+                                                print("!!! Answers : \(unwrappedAnswers.count)")
                                                 self.table.reloadData()
                                             }
         }
     }
     
 }
+
 
 extension AnswersViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -44,9 +48,14 @@ extension AnswersViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuestionsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AnswersTableViewCell
         let answer = answers[indexPath.row]
-        cell.questionLabel.text = answer.body
+        cell.answerLabel.text = answer.body
+        
+        if (indexPath.row == answers.count - 1) {
+            pageIndex += 1
+            self.requestAnswers(pageIndex: pageIndex, pageSize: pageSize)
+        }
         
         return cell
     }

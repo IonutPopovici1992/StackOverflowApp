@@ -18,6 +18,7 @@ struct QuestionList: Codable {
 struct Question: Codable {
     var title: String
     var question_id: UInt
+    var creation_date: Double
     var last_activity_date: Double
     var owner: Owner
 }

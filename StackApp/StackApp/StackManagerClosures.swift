@@ -15,6 +15,7 @@ class StackManagerClosures {
     private static let baseStackOverflowURLString = "https://api.stackexchange.com/2.2/"
     private static let maximumPageSize: UInt = 100
     
+    /// loadQuestions()
     class func loadQuestions(pageIndex: UInt,
                              pageSize: UInt,
                              completionHandler: @escaping ([Question]?, Error?) -> Void) {
@@ -45,6 +46,7 @@ class StackManagerClosures {
 
     }
     
+    /// loadAnswers()
     class func loadAnswers(forQuestion: Question,
                            pageIndex: UInt,
                            pageSize: UInt,

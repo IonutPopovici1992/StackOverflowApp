@@ -45,6 +45,7 @@ class StackManagerDLG {
                                     let title = question["title"] as! String
                                     let lastActivityDate = question["last_activity_date"] as! Double
                                     let questionID = question["question_id"] as! UInt
+                                    let creationDate = question["creation_date"] as! Double
 
                                     let ownerDict = question["owner"] as! Dictionary<String, Any>
                                     let userId = ownerDict["user_id"] as! Int
@@ -63,6 +64,7 @@ class StackManagerDLG {
 
                                     let currentQuestion = Question(title: title,
                                                                    question_id: questionID,
+                                                                   creation_date: creationDate,
                                                                    last_activity_date: lastActivityDate,
                                                                    owner: owner)
 

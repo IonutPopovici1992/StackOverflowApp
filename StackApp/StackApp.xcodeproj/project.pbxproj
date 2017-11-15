@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520C1B351FB9B27B00C572E6 /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520C1B341FB9B27B00C572E6 /* AnswersTableViewCell.swift */; };
 		520F50E01F6A78490080F37D /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F50DF1F6A78490080F37D /* AnswersViewController.swift */; };
 		5210E50C1F4C53DD00104DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */; };
 		5210E50E1F4C53DD00104DC2 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E50D1F4C53DD00104DC2 /* QuestionViewController.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		3451C6D65C871E44348CA0CF /* Pods_StackApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		520C1B341FB9B27B00C572E6 /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
 		520F50DF1F6A78490080F37D /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
 		5210E5081F4C53DD00104DC2 /* StackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				523802F41F669087005608BC /* QuestionsCollectionViewCell.swift */,
 				524699461F58092100569186 /* QuestionsTableViewCell.swift */,
+				520C1B341FB9B27B00C572E6 /* AnswersTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				523D006B1F83AA3C00D4614D /* Answer.swift in Sources */,
 				524699471F58092100569186 /* QuestionsTableViewCell.swift in Sources */,
 				523D006F1F87800800D4614D /* TextsViewController.swift in Sources */,
+				520C1B351FB9B27B00C572E6 /* AnswersTableViewCell.swift in Sources */,
 				5210E50C1F4C53DD00104DC2 /* AppDelegate.swift in Sources */,
 				52B426831F9DEF4D005C8635 /* Comment.swift in Sources */,
 				523802F11F6680B0005608BC /* Double+StackApp.swift in Sources */,
