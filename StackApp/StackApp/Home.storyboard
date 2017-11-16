@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +30,7 @@
         <!--Home-->
         <scene sceneID="ydk-JJ-e87">
             <objects>
-                <viewController title="Home" id="0Qa-BE-3QO" customClass="QuestionViewController" customModule="StackApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="0Qa-BE-3QO" customClass="QuestionCollectionViewController" customModule="StackApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2xq-0L-OQi"/>
                         <viewControllerLayoutGuide type="bottom" id="6gl-IC-I5I"/>
@@ -40,49 +39,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Xz-Eb-bcc">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hny-Qz-lFq">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="z7Q-Kx-rQt" customClass="QuestionsTableViewCell" customModule="StackApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.94999998807907104" contentMode="center" tableViewCell="z7Q-Kx-rQt" id="Jzx-kW-Iow">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" text="Text, text, text, text, text, text, text, text, text, text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmq-NA-8vp" userLabel="Question Label">
-                                                    <rect key="frame" x="5" y="0.0" width="201" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 Ianuarie 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZh-qg-hjb" userLabel="Date Label">
-                                                    <rect key="frame" x="221" y="11" width="79" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="mmq-NA-8vp" firstAttribute="leading" secondItem="Jzx-kW-Iow" secondAttribute="leading" constant="5" id="LWa-m9-9XQ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="GZh-qg-hjb" secondAttribute="bottom" id="Lv7-xH-NHq"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GZh-qg-hjb" secondAttribute="trailing" constant="5" id="T7J-aU-i6F"/>
-                                                <constraint firstItem="mmq-NA-8vp" firstAttribute="top" secondItem="Jzx-kW-Iow" secondAttribute="top" id="abb-1C-FRZ"/>
-                                                <constraint firstItem="GZh-qg-hjb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mmq-NA-8vp" secondAttribute="trailing" constant="15" id="dhh-tK-O5X"/>
-                                                <constraint firstItem="GZh-qg-hjb" firstAttribute="top" secondItem="Jzx-kW-Iow" secondAttribute="topMargin" id="oDI-gA-jJy"/>
-                                                <constraint firstAttribute="bottom" secondItem="mmq-NA-8vp" secondAttribute="bottom" id="qkm-MR-SZD"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="dateLabel" destination="GZh-qg-hjb" id="D3K-XQ-LsL"/>
-                                            <outlet property="questionLabel" destination="mmq-NA-8vp" id="HrG-Rc-gDu"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hny-Qz-lFq">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XDM-0I-b3P">
                                     <size key="itemSize" width="175" height="100"/>
@@ -134,36 +93,22 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Hny-Qz-lFq" firstAttribute="bottom" secondItem="5Xz-Eb-bcc" secondAttribute="bottom" id="0tY-nt-L0r"/>
-                            <constraint firstItem="Hny-Qz-lFq" firstAttribute="trailing" secondItem="5Xz-Eb-bcc" secondAttribute="trailing" id="4Xy-08-0Gn"/>
-                            <constraint firstItem="Hny-Qz-lFq" firstAttribute="leading" secondItem="5Xz-Eb-bcc" secondAttribute="leading" id="847-19-zob"/>
-                            <constraint firstItem="5Xz-Eb-bcc" firstAttribute="top" secondItem="2xq-0L-OQi" secondAttribute="bottom" id="DpA-bP-X0F"/>
-                            <constraint firstItem="5Xz-Eb-bcc" firstAttribute="leading" secondItem="Tti-eV-Q07" secondAttribute="leading" id="El9-iO-P5I"/>
-                            <constraint firstItem="6gl-IC-I5I" firstAttribute="top" secondItem="5Xz-Eb-bcc" secondAttribute="bottom" id="HBm-Os-Mcg"/>
-                            <constraint firstAttribute="trailing" secondItem="5Xz-Eb-bcc" secondAttribute="trailing" id="S4G-xZ-z99"/>
-                            <constraint firstItem="Hny-Qz-lFq" firstAttribute="top" secondItem="5Xz-Eb-bcc" secondAttribute="top" id="SIm-he-EJV"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9hc-c2-Gov"/>
                         <variation key="heightClass=regular-widthClass=regular">
                             <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Questions" image="questions1" selectedImage="questions1" id="IfU-uI-4Vf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home1" selectedImage="home1" id="IfU-uI-4Vf"/>
                     <navigationItem key="navigationItem" title="Home" id="mgG-0R-iOQ">
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="6wl-Sl-2OY">
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="yvz-NE-OZv">
                                 <rect key="frame" x="253" y="6.5" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="switchQuestionsOnOff:" destination="0Qa-BE-3QO" eventType="valueChanged" id="U7G-Ej-8nU"/>
-                                </connections>
                             </switch>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Hny-Qz-lFq" id="Gb1-ea-uG6"/>
-                        <outlet property="table" destination="5Xz-Eb-bcc" id="8DO-Yj-Qmv"/>
                         <segue destination="sGc-qP-QAN" kind="show" identifier="showAnswersSegueIdentifier" id="UuR-Lz-y7M">
                             <nil key="action"/>
                         </segue>
@@ -243,6 +188,6 @@
     </scenes>
     <resources>
         <image name="answers1" width="30" height="30"/>
-        <image name="questions1" width="30" height="30"/>
+        <image name="home1" width="30" height="30"/>
     </resources>
 </document>

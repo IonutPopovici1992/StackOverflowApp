@@ -1,5 +1,5 @@
 //
-//  QuestionViewController.swift
+//  QuestionCollectionViewController.swift
 //  StackApp
 //
 //  Created by John on 8/22/17.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionCollectionViewController: UIViewController {
     
     var questions = [Question]()
     var tappedQuestion: Question?
-    var tableRefreshControl = UIRefreshControl()
     var collectionRefreshControl = UIRefreshControl()
     
     @IBOutlet weak var table: UITableView!
@@ -24,18 +23,10 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configTable()
         configCollectionView()
         requestNextQuestions(resetPrevious: false)
         
-        setupRefreshControlForTable()
         setupRefreshControlForCollection()
-    }
-    
-    /// configTable()
-    fileprivate func configTable() {
-        self.table.delegate = self
-        self.table.dataSource = self
     }
     
     /// configCollectionView()
@@ -75,13 +66,11 @@ class QuestionViewController: UIViewController {
             }
             
             self.questions.append(contentsOf: unwrappedQuestions)
-            self.table.reloadData()
             self.collectionView.reloadData()
         } else {
             self.showAlert(error: errorOrNil)
         }
         
-        self.tableRefreshControl.endRefreshing()
         self.collectionRefreshControl.endRefreshing()
     }
     
@@ -97,15 +86,6 @@ class QuestionViewController: UIViewController {
         
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
-    }
-    
-    /// setupRefreshControlForTable()
-    func setupRefreshControlForTable() {
-        tableRefreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        tableRefreshControl.addTarget(self,
-                                      action: #selector(refreshQuestions),
-                                      for: UIControlEvents.valueChanged)
-        table.addSubview(tableRefreshControl)
     }
     
     /// setupRefreshControlForCollection()
@@ -131,48 +111,10 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    /// switchQuestionsOnOff()
-    @IBAction func switchQuestionsOnOff(_ sender: UISwitch) {
-        UIView.animate(withDuration: 0.3) {
-            self.table.alpha = sender.isOn ? 0.0 : 1.0
-            self.collectionView.alpha = sender.isOn ? 1.0 : 0.0
-        }
-    }
-    
-    /// dataTaskHasCompleted()
-    func dataTaskHasCompleted() {
-        table.reloadData()
-        collectionView.reloadData()
-    }
-    
 }
 
 
-extension QuestionViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    // Number of rows
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questions.count
-    }
-    
-    // Populate row
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuestionsTableViewCell
-        
-        let question = questions[indexPath.row]
-        cell.questionLabel.text = question.title
-        cell.dateLabel.text = question.last_activity_date.unixFormattedTime(format: SADateFormat.shortDate)
-        
-        if (indexPath.row == questions.count - 1) {
-            self.requestNextQuestions(resetPrevious: false)
-        }
-        
-        return cell
-    }
-}
-
-
-extension QuestionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension QuestionCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     // Number of views
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

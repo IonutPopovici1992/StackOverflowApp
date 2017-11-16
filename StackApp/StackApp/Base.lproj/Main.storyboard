@@ -20,11 +20,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="bXK-7D-ro3" kind="relationship" relationship="viewControllers" id="8jD-W0-rjO"/>
-                        <segue destination="KhC-rs-SMe" kind="relationship" relationship="viewControllers" id="1Ni-V3-QCU"/>
-                        <segue destination="Eqc-Zh-DPO" kind="relationship" relationship="viewControllers" id="hxF-u8-bhL"/>
-                        <segue destination="ymq-W8-0y7" kind="relationship" relationship="viewControllers" id="3ng-d7-47Y"/>
-                        <segue destination="1b3-sk-MEy" kind="relationship" relationship="viewControllers" id="Mef-QB-Mv4"/>
-                        <segue destination="wfR-KK-4Ij" kind="relationship" relationship="viewControllers" id="YaP-iK-jL0"/>
+                        <segue destination="ay2-Mb-eu6" kind="relationship" relationship="viewControllers" id="9Y3-Ro-6hV"/>
+                        <segue destination="KhC-rs-SMe" kind="relationship" relationship="viewControllers" id="JbP-vJ-TRl"/>
+                        <segue destination="Eqc-Zh-DPO" kind="relationship" relationship="viewControllers" id="joh-be-vX6"/>
+                        <segue destination="ymq-W8-0y7" kind="relationship" relationship="viewControllers" id="egT-2D-tL3"/>
+                        <segue destination="1b3-sk-MEy" kind="relationship" relationship="viewControllers" id="zeX-uq-6wJ"/>
+                        <segue destination="wfR-KK-4Ij" kind="relationship" relationship="viewControllers" id="w0j-ME-H26"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sF-Ym-RAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -45,7 +46,7 @@
         <scene sceneID="HK0-W8-sKU">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="bXK-7D-ro3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Questions" image="questions1" selectedImage="questions1" id="MwH-4N-cbY"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home1" selectedImage="home1" id="MwH-4N-cbY"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxT-iO-49i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +60,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9e-0r-OJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702" y="-1082"/>
+            <point key="canvasLocation" x="-702" y="-1005"/>
         </scene>
         <!--Progress-->
         <scene sceneID="gd8-5C-e7H">
@@ -69,7 +70,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xI0-Zz-tbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682" y="-965"/>
+            <point key="canvasLocation" x="-682" y="-919"/>
+        </scene>
+        <!--Questions-->
+        <scene sceneID="13n-Su-uw7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Questions" id="ay2-Mb-eu6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Questions" image="questions1" selectedImage="questions1" id="Wnz-hi-87r"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m48-SK-J0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="-1100"/>
         </scene>
         <!--Date-->
         <scene sceneID="WkO-LM-owD">
@@ -79,7 +90,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueG-Gk-9OA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706" y="-856"/>
+            <point key="canvasLocation" x="-706" y="-822"/>
         </scene>
         <!--Search-->
         <scene sceneID="A60-YG-51Z">
@@ -89,11 +100,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLa-Ul-4Za" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-693" y="-747"/>
+            <point key="canvasLocation" x="-693" y="-724"/>
         </scene>
     </scenes>
     <resources>
         <image name="calendar" width="30" height="30"/>
+        <image name="home1" width="30" height="30"/>
         <image name="in-progress" width="30" height="30"/>
         <image name="open-book" width="30" height="30"/>
         <image name="questions1" width="30" height="30"/>
