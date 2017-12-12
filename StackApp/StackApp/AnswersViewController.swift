@@ -10,6 +10,7 @@ import UIKit
 
 class AnswersViewController: UIViewController {
     
+    /// variables
     @IBOutlet weak var table: UITableView!
     
     var pageIndex: UInt = 1
@@ -21,6 +22,9 @@ class AnswersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        table.estimatedRowHeight = 40
+        table.rowHeight = UITableViewAutomaticDimension
         
         requestAnswers(pageIndex: pageIndex, pageSize: pageSize)
     }
