@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5205EA5D1FC2E1560073CF47 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5205EA5C1FC2E1560073CF47 /* InfoViewController.swift */; };
 		520C1B351FB9B27B00C572E6 /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520C1B341FB9B27B00C572E6 /* AnswersTableViewCell.swift */; };
 		520F50E01F6A78490080F37D /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F50DF1F6A78490080F37D /* AnswersViewController.swift */; };
 		5210E50C1F4C53DD00104DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */; };
@@ -30,13 +31,16 @@
 		523D006F1F87800800D4614D /* TextsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D006E1F87800800D4614D /* TextsViewController.swift */; };
 		523D5D091FBD92BC0077992A /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D5D081FBD92BC0077992A /* QuestionTableViewController.swift */; };
 		523D5D0B1FBDC2590077992A /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D5D0A1FBDC2590077992A /* DateViewController.swift */; };
+		523FC27B1FC2DA8000F38910 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523FC27A1FC2DA8000F38910 /* Info.storyboard */; };
 		524699471F58092100569186 /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524699461F58092100569186 /* QuestionsTableViewCell.swift */; };
 		528278F71F4EF9B200A919E6 /* StackManagerDLG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */; };
+		52878B7D1FD6AA7A00DF2165 /* InfoPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52878B7C1FD6AA7A00DF2165 /* InfoPickerDelegate.swift */; };
 		529DCA731F5593C600F0E8E4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DCA721F5593C600F0E8E4 /* Question.swift */; };
 		52AA20041F99E3B400CEB33C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA20031F99E3B400CEB33C /* Home.storyboard */; };
 		52B426811F9DEF08005C8635 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B426801F9DEF08005C8635 /* Owner.swift */; };
 		52B426831F9DEF4D005C8635 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B426821F9DEF4D005C8635 /* Comment.swift */; };
 		52C617191F98E8FC00EAB1A1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C617181F98E8FC00EAB1A1 /* Search.storyboard */; };
+		52EF8E241FDFEB210061D16F /* InfoViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF8E231FDFEB210061D16F /* InfoViewProtocol.swift */; };
 		52FAC6C41F599A3200A4394F /* StackManagerClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */; };
 		C0AD1F27CBB01E4594CA46AC /* Pods_StackApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3451C6D65C871E44348CA0CF /* Pods_StackApp.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		3451C6D65C871E44348CA0CF /* Pods_StackApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5205EA5C1FC2E1560073CF47 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		520C1B341FB9B27B00C572E6 /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
 		520F50DF1F6A78490080F37D /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
 		5210E5081F4C53DD00104DC2 /* StackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,13 +94,16 @@
 		523D006E1F87800800D4614D /* TextsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsViewController.swift; sourceTree = "<group>"; };
 		523D5D081FBD92BC0077992A /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		523D5D0A1FBDC2590077992A /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		523FC27A1FC2DA8000F38910 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		524699461F58092100569186 /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		528278F61F4EF9B200A919E6 /* StackManagerDLG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerDLG.swift; sourceTree = "<group>"; };
+		52878B7C1FD6AA7A00DF2165 /* InfoPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPickerDelegate.swift; sourceTree = "<group>"; };
 		529DCA721F5593C600F0E8E4 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		52AA20031F99E3B400CEB33C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		52B426801F9DEF08005C8635 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		52B426821F9DEF4D005C8635 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		52C617181F98E8FC00EAB1A1 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		52EF8E231FDFEB210061D16F /* InfoViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewProtocol.swift; sourceTree = "<group>"; };
 		52FAC6C31F599A3200A4394F /* StackManagerClosures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackManagerClosures.swift; sourceTree = "<group>"; };
 		605233DFD6E4872A367F94E6 /* Pods-StackApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StackApp/Pods-StackApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC254329B5B6A3D9CC6CC203 /* Pods-StackApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StackApp/Pods-StackApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,12 +183,14 @@
 				523802F91F66DD92005608BC /* Storyboards */,
 				523802F81F66DD1E005608BC /* Cells */,
 				523802F71F66DCF2005608BC /* Extensions */,
+				52E759541FC6CC4B00FBA1E6 /* InfoDataDelegates */,
 				5210E50D1F4C53DD00104DC2 /* QuestionCollectionViewController.swift */,
 				523D5D081FBD92BC0077992A /* QuestionTableViewController.swift */,
 				520F50DF1F6A78490080F37D /* AnswersViewController.swift */,
 				523D006E1F87800800D4614D /* TextsViewController.swift */,
 				522AC99D1F94FD2100BC6A01 /* ProgressViewController.swift */,
 				523D5D0A1FBDC2590077992A /* DateViewController.swift */,
+				5205EA5C1FC2E1560073CF47 /* InfoViewController.swift */,
 				5210E5121F4C53DD00104DC2 /* StackApp.xcdatamodeld */,
 			);
 			path = StackApp;
@@ -231,6 +241,7 @@
 				5238BFA21F99F02E0033F152 /* Texts.storyboard */,
 				5238BFA41F99F3390033F152 /* Progress.storyboard */,
 				5238BFA61F99F44D0033F152 /* Date.storyboard */,
+				523FC27A1FC2DA8000F38910 /* Info.storyboard */,
 				52C617181F98E8FC00EAB1A1 /* Search.storyboard */,
 				5238BFA81F9A029C0033F152 /* Settings.storyboard */,
 			);
@@ -261,12 +272,21 @@
 			isa = PBXGroup;
 			children = (
 				5210E50B1F4C53DD00104DC2 /* AppDelegate.swift */,
+				523802FF1F6815A2005608BC /* SegueIdentifiers.swift */,
 				5210E5171F4C53DD00104DC2 /* LaunchScreen.storyboard */,
 				5210E5151F4C53DD00104DC2 /* Assets.xcassets */,
 				5210E51A1F4C53DD00104DC2 /* Info.plist */,
-				523802FF1F6815A2005608BC /* SegueIdentifiers.swift */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52E759541FC6CC4B00FBA1E6 /* InfoDataDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				52878B7C1FD6AA7A00DF2165 /* InfoPickerDelegate.swift */,
+				52EF8E231FDFEB210061D16F /* InfoViewProtocol.swift */,
+			);
+			name = InfoDataDelegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523FC27B1FC2DA8000F38910 /* Info.storyboard in Resources */,
 				5210E5191F4C53DD00104DC2 /* LaunchScreen.storyboard in Resources */,
 				52AA20041F99E3B400CEB33C /* Home.storyboard in Resources */,
 				5210E5161F4C53DD00104DC2 /* Assets.xcassets in Resources */,
@@ -476,6 +497,7 @@
 			files = (
 				522AC99E1F94FD2100BC6A01 /* ProgressViewController.swift in Sources */,
 				523D5D091FBD92BC0077992A /* QuestionTableViewController.swift in Sources */,
+				52EF8E241FDFEB210061D16F /* InfoViewProtocol.swift in Sources */,
 				52FAC6C41F599A3200A4394F /* StackManagerClosures.swift in Sources */,
 				523802F51F669087005608BC /* QuestionsCollectionViewCell.swift in Sources */,
 				523803001F6815A2005608BC /* SegueIdentifiers.swift in Sources */,
@@ -488,11 +510,13 @@
 				520C1B351FB9B27B00C572E6 /* AnswersTableViewCell.swift in Sources */,
 				523D5D0B1FBDC2590077992A /* DateViewController.swift in Sources */,
 				5210E50C1F4C53DD00104DC2 /* AppDelegate.swift in Sources */,
+				5205EA5D1FC2E1560073CF47 /* InfoViewController.swift in Sources */,
 				52B426831F9DEF4D005C8635 /* Comment.swift in Sources */,
 				523802F11F6680B0005608BC /* Double+StackApp.swift in Sources */,
 				528278F71F4EF9B200A919E6 /* StackManagerDLG.swift in Sources */,
 				52B426811F9DEF08005C8635 /* Owner.swift in Sources */,
 				5210E5141F4C53DD00104DC2 /* StackApp.xcdatamodeld in Sources */,
+				52878B7D1FD6AA7A00DF2165 /* InfoPickerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
