@@ -10,11 +10,11 @@ import UIKit
 
 class QuestionCollectionViewController: UIViewController {
     
+    /// variables
     var questions = [Question]()
     var tappedQuestion: Question?
     var collectionRefreshControl = UIRefreshControl()
     
-    @IBOutlet weak var table: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var pageIndex: UInt = 0
@@ -35,7 +35,7 @@ class QuestionCollectionViewController: UIViewController {
         let interItemSize: CGFloat = 20.0
         let cellMargin: CGFloat = 20.0
         
-        let widthSize = UIScreen.main.bounds.width/2.0 - (interItemSize/2.0) - cellMargin
+        let widthSize = UIScreen.main.bounds.width / 2.0 - (interItemSize / 2.0) - cellMargin
         let heightSize: CGFloat = 100.0
         let layout = UICollectionViewFlowLayout()
         
@@ -95,7 +95,6 @@ class QuestionCollectionViewController: UIViewController {
                                            action: #selector(refreshQuestions),
                                            for: UIControlEvents.valueChanged)
         collectionView.addSubview(collectionRefreshControl)
-        
     }
     
     /// refreshQuestions()

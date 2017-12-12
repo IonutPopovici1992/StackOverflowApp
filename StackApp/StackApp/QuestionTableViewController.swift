@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionTableViewController: UIViewController {
     
+    /// variables
     var questions = [Question]()
     var tappedQuestion: Question?
     var tableRefreshControl = UIRefreshControl()
@@ -121,4 +122,11 @@ extension QuestionTableViewController: UITableViewDataSource, UITableViewDelegat
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectItemAt indexPath: IndexPath) {
+        self.tappedQuestion = questions[indexPath.row]
+        
+        self.performSegue(withIdentifier: SASegueIdentifiers.segueFromQuestionsToAnswers, sender: self)
+    }
+    
 }
