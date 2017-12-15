@@ -102,7 +102,7 @@ class InfoViewController: UIViewController, InfoViewProtocol {
         let weightSelectedIndex = weightPicker.selectedRow(inComponent: 0)
         let weightValue = weightDelegate.infoPickerData[weightSelectedIndex]
         
-        let sentence = "The person is a \(genderValue)"
+        let sentence = "The person is a/an \(genderValue)"
             + " and is \(ageValue) years old,"
             + " height \(metersValue) m & \(centimetersValue) cm,"
             + " weight \(weightValue) kg."

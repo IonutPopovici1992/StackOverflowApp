@@ -11,7 +11,7 @@ import UIKit
 class InfoPickerDelegate: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var infoPickerData: [String] = [String]()
-    var ownerViewController: InfoViewController!
+    var ownerViewController: InfoViewProtocol!
     
     // numberOfComponents()
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
