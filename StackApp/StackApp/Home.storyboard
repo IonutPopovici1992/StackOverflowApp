@@ -133,9 +133,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ABn-PG-kXS">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="4DP-EP-p87" customClass="AnswersTableHeaderView" customModule="StackApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb5-KD-VNY">
+                                            <rect key="frame" x="5" y="0.0" width="310" height="44"/>
+                                            <string key="text">Question text lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="hb5-KD-VNY" firstAttribute="leading" secondItem="4DP-EP-p87" secondAttribute="leading" constant="5" id="DAh-Gl-odq"/>
+                                        <constraint firstAttribute="trailing" secondItem="hb5-KD-VNY" secondAttribute="trailing" constant="5" id="DsR-Sq-C2e"/>
+                                        <constraint firstAttribute="bottom" secondItem="hb5-KD-VNY" secondAttribute="bottom" id="FtT-qp-rY1"/>
+                                        <constraint firstItem="hb5-KD-VNY" firstAttribute="top" secondItem="4DP-EP-p87" secondAttribute="top" id="G2q-UY-sEo"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="questionTitleLabel" destination="hb5-KD-VNY" id="Fm3-Lt-3nH"/>
+                                    </connections>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="BYL-RC-agN" customClass="AnswersTableViewCell" customModule="StackApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="72" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BYL-RC-agN" id="mYB-bb-HxP">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
@@ -161,6 +184,7 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="sGc-qP-QAN" id="JVa-ZF-ScB"/>
                                     <outlet property="delegate" destination="sGc-qP-QAN" id="rN3-lv-jsS"/>

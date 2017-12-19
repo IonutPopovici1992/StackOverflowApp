@@ -27,6 +27,7 @@
 		5238BFA71F99F44D0033F152 /* Date.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5238BFA61F99F44D0033F152 /* Date.storyboard */; };
 		5238BFA91F9A029C0033F152 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5238BFA81F9A029C0033F152 /* Settings.storyboard */; };
 		5239C8231FBC6B6E0051C506 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5239C8221FBC6B6E0051C506 /* Questions.storyboard */; };
+		523B85911FE93BD200FA46B5 /* AnswersTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B85901FE93BD200FA46B5 /* AnswersTableHeaderView.swift */; };
 		523D006B1F83AA3C00D4614D /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D006A1F83AA3C00D4614D /* Answer.swift */; };
 		523D006F1F87800800D4614D /* TextsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D006E1F87800800D4614D /* TextsViewController.swift */; };
 		523D5D091FBD92BC0077992A /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D5D081FBD92BC0077992A /* QuestionTableViewController.swift */; };
@@ -90,6 +91,7 @@
 		5238BFA61F99F44D0033F152 /* Date.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Date.storyboard; sourceTree = "<group>"; };
 		5238BFA81F9A029C0033F152 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		5239C8221FBC6B6E0051C506 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
+		523B85901FE93BD200FA46B5 /* AnswersTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableHeaderView.swift; sourceTree = "<group>"; };
 		523D006A1F83AA3C00D4614D /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		523D006E1F87800800D4614D /* TextsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsViewController.swift; sourceTree = "<group>"; };
 		523D5D081FBD92BC0077992A /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				523802F41F669087005608BC /* QuestionsCollectionViewCell.swift */,
 				524699461F58092100569186 /* QuestionsTableViewCell.swift */,
 				520C1B341FB9B27B00C572E6 /* AnswersTableViewCell.swift */,
+				523B85901FE93BD200FA46B5 /* AnswersTableHeaderView.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				522AC99E1F94FD2100BC6A01 /* ProgressViewController.swift in Sources */,
+				523B85911FE93BD200FA46B5 /* AnswersTableHeaderView.swift in Sources */,
 				523D5D091FBD92BC0077992A /* QuestionTableViewController.swift in Sources */,
 				52EF8E241FDFEB210061D16F /* InfoViewProtocol.swift in Sources */,
 				52FAC6C41F599A3200A4394F /* StackManagerClosures.swift in Sources */,
